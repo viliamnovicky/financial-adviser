@@ -1,0 +1,52 @@
+.cont__costumers {
+    background: $color-grey-light-1 url(../img/backgroung-ornament.png);
+    height: 30rem;
+    width: 90vw;
+    margin: auto;
+
+    &--light {
+        background: rgba($color-grey-light-1, 0.5) url(../img/backgroung-ornament-reverse.png);
+    }
+
+    @include respond(phone) {
+        height: 25rem;
+    }
+}
+
+.costumers {
+
+    &__slogan {
+        color: $color-grey-dark-2;
+        width: 80%;
+        margin: auto;
+        padding-top: 5rem;
+        font-size: $font-size-h2;
+        font-style: italic;
+        font-weight: 100;
+
+        @include respond(tab-land) {
+            font-size: $font-size-h3;
+        }
+
+        @include respond(tab-port) {
+            font-size: $font-size-h4;
+        }
+
+        @include respond(phone) {
+            font-size: $font-size-h5;
+        }
+    }
+
+    &__name {
+        color: $color-primary;
+        font-size: $font-size-h5;
+        padding-top: 2rem;
+        text-align: left;
+        width: 80%;
+        margin: auto;
+
+        @include respond(tab-port) {
+            font-size: $font-size-p;
+        }
+    }
+}

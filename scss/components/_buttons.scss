@@ -1,0 +1,19 @@
+.btn {
+    display: grid;
+    width: 20rem;
+    height: 5rem;
+    text-decoration: none;
+    text-align: center;
+    align-items: center;
+    font-size: $font-size-h5;
+
+    &__primary {
+        background: $color-primary;
+        color: $color-white;
+
+        &:hover {
+            box-shadow: .1rem .1rem 2rem $color-primary;
+        }
+
+    }
+}

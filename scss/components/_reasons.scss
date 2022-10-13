@@ -1,0 +1,9 @@
+.cont__reasons {
+    background: $color-white;
+    position: relative;
+    height: 35rem;
+
+    @include respond(tab-port) {
+        height: 30rem;
+    }
+}

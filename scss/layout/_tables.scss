@@ -1,0 +1,35 @@
+.table {
+    width: 90%;
+    position: absolute;
+    bottom: 5rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include respond(small-desktop) {
+        width: 95%;
+    }
+
+    @include respond(tab-land) {
+        width: 90%;
+      }
+
+    &__row {
+        width: 100%;
+        text-align: center;
+    }
+
+    &__data {
+        border-bottom: 1px solid $color-grey-light-1;
+        height: 5rem;
+        color: $color-grey-dark;
+
+        @include respond(tab-port) {
+            font-size: $font-size-p;
+          }
+        
+        &--x4 {
+            font-size: $font-size-p;
+        }
+
+    }
+}

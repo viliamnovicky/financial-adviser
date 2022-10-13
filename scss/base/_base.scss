@@ -1,0 +1,59 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-family: 'Rubik', sans-serif;
+  transition: all 0.1s;
+  color: $color-grey-dark;
+}
+
+html {
+  font-size: 62.5%;
+  width: 100%;
+  min-height: 100vh;
+  z-index: -10;
+}
+
+body {
+  overflow-x: hidden;
+  overflow-y: scroll;
+  background: $color-grey-light;
+  z-index: -10;
+}
+
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.hidden {
+  visibility: hidden;
+  opacity: 0;
+}
+
+::selection {
+  color: $color-white;
+  background: $color-grey-dark;
+}
+
+// SCROLLBAR
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: $color-white;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: $color-grey-dark;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}

@@ -1,0 +1,86 @@
+.navbar {
+    display: grid;
+    grid-template-columns: 1fr 1fr 3fr;
+    width: 100vw;
+    height: 10rem;
+    background: $color-white;
+    position: fixed;
+    top: 0;
+    z-index: 1000;
+
+    &__logo {
+        background: url(../img/logo.png) no-repeat center center/cover;
+        width: 20rem;
+        height: 8.8rem;
+        margin-left: 6rem;
+        margin-top: .5rem;
+
+        @include respond(tab-land) {
+            width: 15rem;
+            height: 6.6rem;
+            margin-top: 2rem;
+            margin-left: 2rem;
+        }
+    }
+
+    &__name {
+        display: grid;
+        align-self: center;
+        color: $color-primary;
+        font-size: calc(1vw + 3rem);
+        font-family: 'Great Vibes', cursive;
+        font-weight: 200;
+        padding-left: 3rem;
+
+        @include respond(tab-land) {
+            font-size: calc(1vw + 2rem);
+            padding-left: 0;
+        }
+
+        @include respond(tab-port) {
+            padding-left: 2rem;
+            width: 50rem;
+        }
+    }
+
+    &__ul {
+        display: grid;
+        height: 10rem;
+    }
+
+    &__links {
+        list-style-type: none;
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        
+        @include respond(tab-port) {
+            width: 6rem;
+            height: 6rem;
+            position: absolute;
+            top: 2rem;
+            right: 5rem;
+            border-radius: 50%;
+        }
+    }
+
+    &__link {
+        text-decoration: none;
+        font-size: $font-size-p;
+        text-transform: uppercase;
+        color: $color-grey-dark;
+        display: grid;
+        justify-self: center;
+        align-self: center;
+        height: 2rem;
+
+        &:hover {
+            color: $color-primary;
+            text-decoration: underline;
+        }
+
+        @include respond(tab-port) {
+            opacity: 0;
+            visibility: hidden;
+        }
+    }
+}

@@ -1,0 +1,103 @@
+.about {
+  height: 50rem;
+  margin: 0 auto;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 1;
+
+
+  &__cont {
+    background: $color-white;
+    color: $color-grey-dark;
+    z-index: 10;
+    height: 50rem;
+    display: grid;
+    transition: all 0.5s;
+    
+    &--left {
+        grid-template-columns: 1.5fr 1.8fr;
+
+        &:hover .about__cont--img-left {
+            width: 95%;
+            opacity: 100%;
+        }
+    }
+
+    &--right {
+        grid-template-columns: 2fr 1.5fr;
+
+        &:hover .about__cont--img-right {
+            width: 95%;
+            opacity: 100%;
+            margin-left: 5%;
+        }
+    }
+
+    &--header {
+        font-size: $font-size-h3;
+        margin-top: 10rem;
+        text-transform: uppercase;
+        font-weight: 300;
+        margin-bottom: 3rem;
+
+        @include respond(ntb) {
+            font-size: $font-size-h4;
+            margin-top: 11rem;
+        }
+    }
+
+    &--logo {
+        width: 10rem;
+        position: absolute;
+    }
+
+    &--img {
+        background: url(../img/avatar-1.jpg) no-repeat center center/cover;
+        width: 100%;
+        transition: all 0.3s;
+        opacity: 0.8;
+
+        &-left {
+            clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0% 100%);
+        }
+
+        &-right {
+            clip-path: polygon(0% 00%, 100% 0%, 100% 100%, 20% 100%);
+        }
+    }
+
+    &--paragraph {
+        text-align: left;
+        font-size: $font-size-h5;
+        font-weight: 100;
+        line-height: 3rem;
+        padding-left: 2rem;
+        padding-right: 2rem;
+        width: 90%;
+        margin-bottom: 1rem;
+
+        @include respond(ntb) {
+            width: 95%;
+            padding-left: 1rem;
+            padding-right: 1rem;
+        }
+    }
+  }
+}
+
+#profi {
+    background: url(../img/profi.jpg) no-repeat center center/cover;
+}
+
+#zodpovednost {
+    background: url(../img/zodpovednost.jpg) no-repeat center center/cover;
+}
+
+#otvorenost {
+    background: url(../img/otvorenost.jpg) no-repeat center center/cover;
+}
+
+#kvalita {
+    background: url(../img/kvalita.jpg) no-repeat center center/cover;
+}

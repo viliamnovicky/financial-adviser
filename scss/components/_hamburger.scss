@@ -1,0 +1,120 @@
+.hamburger {
+
+    @include respond(tab-port) {
+        visibility: visible;
+    }
+
+    &__links {
+        transition: right 0.5s;
+        position: absolute;
+        width: 30rem;
+        list-style-type: none;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        top: 10rem;
+        right: -30rem;
+        box-shadow:  -0.2rem .3rem 1rem rgba($color-grey-dark, 0.5);
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    &__link {
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: $font-size-p;
+        background: $color-grey-dark;
+        color: $color-grey-light-3;
+        padding: 2rem 0;
+        border-bottom: 1px solid rgba($color-grey-light-3, 0.1);
+
+
+        &:hover {
+            text-decoration: underline;
+            color: $color-white;
+            background: $color-primary;
+        }
+    }
+
+    &__checkbox {
+        visibility: hidden;
+    }
+
+    &__checkbox:checked ~ &__links {
+        visibility: visible;
+        opacity: 1;
+        right: 0;
+    }
+
+    &__btn {
+        visibility: hidden;
+        z-index: 10;
+        width: 5rem;
+        height: 5rem;
+        display: block;
+        position: absolute;
+        top: 2rem;
+        right: 5rem;
+        border-radius: 50%;
+        cursor: pointer;
+        background: $color-grey-light ;
+        transition: all .1s;
+        box-shadow: .1rem .1rem 1rem rgba($color-grey-dark-3, 0.5);
+
+        &:hover {
+            box-shadow: .1rem .1rem 1.5rem $color-grey-dark-3;
+            width: 5.2rem;
+            height: 5.2rem;
+
+            @include respond(phone) {
+                width: 4.2rem;
+                height: 4.2rem;
+            }
+        }
+
+        &:active {
+            box-shadow: .1rem .1rem .5rem $color-grey-dark-3;
+            width: 4.8rem;
+            height: 4.8rem;
+
+            @include respond(phone) {
+                width: 3.8rem;
+                height: 3.8rem;
+            }
+        }
+
+        @include respond(tab-port) {
+            visibility: visible;
+        }
+
+        @include respond(phone) {
+            top: 2.5rem;
+            right: 2rem;
+            width: 4rem;
+            height: 4rem;
+        }
+    }
+
+
+    &__part {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 50%;
+        height: .3rem;
+        background: grey;
+
+        &--top {
+            top: calc(30% - 0.15rem);
+        }
+
+        &--middle {
+            top: 50%;
+        }
+
+        &--bottom {
+            top: 70%;
+        }
+    }
+} 

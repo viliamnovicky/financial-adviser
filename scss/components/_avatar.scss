@@ -1,0 +1,20 @@
+.avatar {
+    background: url(../img/avatar.jpg) no-repeat center center/cover;
+    width: 25rem;
+    height: 25rem;
+    border-radius: 50%;
+    margin: 2rem auto;
+    border: 1.5rem solid $color-grey-light;
+    z-index: 100;
+    margin-bottom: -10rem;
+    display: grid;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 10rem;
+
+    @include respond(ntb) {
+        width: 25rem;
+    height: 25rem;
+    }
+}

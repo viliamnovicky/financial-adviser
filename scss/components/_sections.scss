@@ -1,0 +1,53 @@
+.section {
+  transition: all 0.5s;
+  position: relative;
+  height: 1000%;
+
+  &__header {
+    font-size: $font-size-h1;
+    color: $color-grey-dark;
+    margin: 0 auto;
+    text-align: center;
+    width: 100%;
+    margin-bottom: 2rem;
+    padding-top: 5rem;
+
+    @include respond(tab-port) {
+      font-size: $font-size-h2;
+    }
+
+    @include respond(tab-port) {
+      font-size: $font-size-h3;
+    }
+
+    &--costumers {
+      padding-top: 15rem;
+    }
+  }
+
+  &__about {
+    height: 134rem;
+    padding-top: 30rem;
+
+    @include respond(tab-land) {
+      height: 236rem;
+    }
+  }
+
+  &__reasons {
+    padding-top: $padding-section-top;
+  }
+
+  &__products {
+    padding-top: $padding-section-top;
+    height: 168rem;
+
+    @include respond(tab-land) {
+      height: 318rem;
+    }
+  }
+
+  &__contact {
+    padding-top: $padding-section-top;
+  }
+}

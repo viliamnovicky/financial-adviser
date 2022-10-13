@@ -1,0 +1,84 @@
+.form {
+    width: 61vw !important;
+    align-items: center !important;
+    background: red;
+    z-index: 100000000000;
+
+    @include respond(tab-land) {
+        grid-template-columns: 1fr 1fr !important;
+      }
+
+    &__cont {
+        width: 30vw;
+        height: 30vw;
+        margin-top: 5rem;
+    }
+
+    &__group {
+        height: 10rem;
+    }
+
+    &__element {
+        display: block;
+        width: 100%;
+        padding: 1rem 0;
+        font-size: $font-size-h5;
+
+        &--label {
+            text-align: left;
+            padding-left: 1rem;
+            padding-top: 0;
+
+            &--textarea {
+                padding-top: 1rem;
+            }
+        }
+
+        &--input {
+            margin-bottom: 1rem;
+            border: 1px solid rgba($color-grey-dark-3, .2);
+            padding-left: 1rem;
+            background: $color-white;
+            color: $color-grey-dark;
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 1rem 2rem rgba($color-black, .1);
+                border: 1px solid green;               
+            }
+
+            &:focus:invalid {
+                border: 1px solid red;
+            }
+        }
+
+        &--input:placeholder-shown + &--label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-4rem);
+        }
+
+        &--textarea {
+            padding: 1rem;
+            height: 24rem;
+            border: 1px solid rgba($color-grey-dark-3, .2);
+
+            &:focus {
+                outline: none;
+                box-shadow: 0 1rem 2rem rgba($color-black, .1);
+                border: 1px solid green;
+            }
+
+            &:focus:invalid {
+                border: 1px solid red;
+            }
+        }
+
+        &--textarea:placeholder-shown + &--label {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-22rem);
+        }
+    }
+
+}

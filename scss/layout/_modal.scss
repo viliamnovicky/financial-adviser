@@ -1,0 +1,68 @@
+.modal {
+
+    &__header {
+        font-size: $font-size-h2;
+        color: $color-white;
+        margin: 0 auto;
+        text-align: center;
+        width: 100%;
+        margin-bottom: 2rem;
+        padding-top: 5rem;
+    }
+
+    &__close {
+        font-weight: 800;
+        position: absolute;
+        top: 2rem;
+        right: 2rem;
+        width: 4rem;
+        height: 4rem;
+        border-radius: 50%;
+        z-index: 1000000;
+        color: $color-grey-dark;
+        border: none;
+        background: $color-white;
+        cursor: pointer;
+        box-shadow: .1rem .1rem 1rem rgba($color-grey-dark-3, 0.5);
+
+        &:hover {
+            width: 4.2rem;
+            height: 4.2rem;
+            box-shadow: .1rem .1rem 1.5rem $color-grey-dark-3;
+        }
+
+        &:active {
+            width: 3.8rem;
+            height: 3.8rem;
+            box-shadow: .1rem .1rem .5rem $color-grey-dark-3;
+        }
+
+    }
+
+    &__bg {
+        width: 100vw;
+        height: 100vh;
+        background: rgba($color-black, 0.5);
+        position: fixed;
+        @include fixed-center; 
+        z-index: 1000000;
+        backdrop-filter: blur(.5rem);
+        border-radius: 0;
+    }
+
+    &__cont {
+        background: $color-grey-light-3 url(../img/backgroung-ornament-modal.png) no-repeat center center/cover;
+        width: 80vw;
+        height: 70vh;
+        z-index: 1000000;
+        position: fixed;
+        @include fixed-center
+    }
+
+    &__send {
+        position: absolute;
+        bottom: 10rem;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}

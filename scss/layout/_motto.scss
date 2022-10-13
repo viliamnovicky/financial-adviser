@@ -1,0 +1,83 @@
+.motto {
+    background: $color-grey-dark-1 url(../img/backgroung-ornament.png);
+    width: 90vw;
+    height: 40rem;
+    margin: auto;
+    margin-top: 12rem;
+    transition: all 0.3s;
+
+    @include respond(phone) {
+        height: 30rem;
+    }
+
+    &:hover {
+        background: $color-grey-dark-2 url(../img/backgroung-ornament.png);
+
+        .motto__text--1 {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .motto__text--2{
+            opacity: 0;
+            visibility: hidden;
+
+            @include respond(phone) {
+                opacity: 1;
+                visibility: visible;
+            }
+        }
+    }
+
+    &__text {
+        color: $color-white;
+        font-size: calc(4vw + 45px);
+        padding-left: 10rem;
+        padding-top: 5rem;
+        text-align: left;
+        width: 80%;
+        position: absolute;
+        transition: all 0.3s;
+        font-weight: 600;
+
+        @include respond(ntb) {
+            font-size: calc(4vw + 35px);
+        }
+
+        @include respond(tab-port) {
+            padding-left: 5rem;
+        }
+
+        @include respond(phone) {
+            padding-top: 2rem;
+            padding-left: 2rem;
+            font-size: calc(4vw + 15px);
+
+        }
+
+        &--1 {
+            opacity: 0;
+            visibility: hidden;
+
+            @include respond(tab-port) {
+                font-size: calc(4vw + 25px);
+            }
+
+            @include respond(phone) {
+                font-size: calc(4vw + 15px);
+                opacity: 1;
+                visibility: visible;
+                margin-top: 10rem;
+            }
+        }
+
+        &--2 {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        span {
+            color: $color-primary;
+        }
+    }
+}
