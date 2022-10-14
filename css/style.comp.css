@@ -335,7 +335,7 @@ button {
 
 .cont__costumers {
   background: #dfe6ea url(../img/backgroung-ornament.png);
-  height: 30rem;
+  height: 35rem;
   width: 90vw;
   margin: auto;
 }
@@ -344,7 +344,7 @@ button {
 }
 @media only screen and (max-width: 37.5em) {
   .cont__costumers {
-    height: 25rem;
+    height: 30rem;
     width: 98vw;
   }
 }
@@ -1114,6 +1114,68 @@ button {
   bottom: 10rem;
   left: 50%;
   transform: translateX(-50%);
+}
+
+.slider {
+  width: 90vw;
+  height: 35rem;
+  margin: 0 auto;
+  position: relative;
+  overflow: hidden;
+}
+@media only screen and (max-width: 37.5em) {
+  .slider {
+    width: 98vw;
+    height: 30rem;
+  }
+}
+.slider__btn {
+  position: absolute;
+  top: 50%;
+  z-index: 100000000;
+  opacity: 0.5;
+  border: none;
+  border-radius: 50%;
+  height: 4rem;
+  width: 4rem;
+  padding: 2rem;
+  cursor: pointer;
+}
+.slider__btn:hover {
+  opacity: 0.8;
+  box-shadow: 0.1rem 0.1rem 1rem #4d4d4d;
+}
+.slider__btn:active {
+  height: 3.9rem;
+  width: 3.9rem;
+  opacity: 0.8;
+  box-shadow: 0.1rem 0.1rem 0.5rem #4d4d4d;
+}
+.slider__btn--left {
+  left: 6%;
+  transform: translate(-50%, -50%);
+  background: rgba(248, 249, 250, 0.5) url(../img/angle-left.svg) no-repeat center;
+}
+.slider__btn--right {
+  right: 6%;
+  transform: translate(50%, -50%);
+  background: rgba(248, 249, 250, 0.5) url(../img/angle-right.svg) no-repeat center;
+}
+
+.slide {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 35rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 1s;
+}
+@media only screen and (max-width: 37.5em) {
+  .slide {
+    height: 30rem;
+  }
 }
 
 /*# sourceMappingURL=style.comp.css.map */

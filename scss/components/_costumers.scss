@@ -1,6 +1,6 @@
 .cont__costumers {
     background: $color-grey-light-1 url(../img/backgroung-ornament.png);
-    height: 30rem;
+    height: 35rem;
     width: 90vw;
     margin: auto;
 
@@ -9,7 +9,7 @@
     }
 
     @include respond(phone) {
-        height: 25rem;
+        height: 30rem;
         width: 98vw;
     }
 }

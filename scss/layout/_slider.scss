@@ -1,0 +1,65 @@
+.slider {
+    width: 90vw;
+    height: 35rem;
+    margin: 0 auto;
+    position: relative;
+    overflow: hidden;
+
+    @include respond(phone) {
+        width: 98vw;
+        height: 30rem;
+    }
+
+    &__btn {
+        position: absolute;
+        top: 50%;
+        z-index: 100000000;
+        opacity: 0.5;
+        border: none;
+        border-radius: 50%;
+        height: 4rem;
+        width: 4rem;
+        padding: 2rem;
+        cursor: pointer;
+      
+        &:hover {
+          opacity: 0.8;
+          box-shadow: 0.1rem 0.1rem 1rem $color-grey-dark;
+        }
+      
+        &:active {
+          height: 3.9rem;
+          width: 3.9rem;
+          opacity: 0.8;
+          box-shadow: 0.1rem 0.1rem 0.5rem $color-grey-dark;
+        }
+      
+        &--left {
+          left: 6%;
+          transform: translate(-50%, -50%);
+          background: rgba($color-grey-light, 0.5) url(../img/angle-left.svg) no-repeat center;
+        }
+      
+        &--right {
+          right: 6%;
+          transform: translate(50%, -50%);
+          background: rgba($color-grey-light, 0.5) url(../img/angle-right.svg) no-repeat center;
+        }
+      }
+  }
+
+.slide {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 35rem;
+  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 1s;
+
+    @include respond(phone) {
+        height: 30rem;
+    }
+  }
