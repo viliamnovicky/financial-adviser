@@ -1,17 +1,21 @@
 .cont-grid-2x {
-    display: grid;
-    width: 90vw;
-    height: 0;
-    grid-template-columns: repeat(2, 1fr);
-    text-align: center;
-    align-items: center;
-    grid-gap: 2rem;
-    margin: auto;
-  
-    @include respond(tab-land) {
-      grid-template-columns: 1fr;
-    }
+  display: grid;
+  width: 90vw;
+  height: 0;
+  grid-template-columns: repeat(2, 1fr);
+  text-align: center;
+  align-items: center;
+  grid-gap: 2rem;
+  margin: auto;
+
+  @include respond(tab-land) {
+    grid-template-columns: 1fr;
   }
+
+  @include respond(phone) {
+    width: 98vw;
+  }
+}
 
 .cont-grid-3x {
   background: transparent;
@@ -24,12 +28,16 @@
   margin: auto;
 
   @include respond(tab-land) {
-      grid-template-columns: 1fr 1fr;
-    }
+    grid-template-columns: 1fr 1fr;
+  }
 
-    @include respond(tab-port) {
-      grid-template-columns: 1fr;
-    }
+  @include respond(tab-port) {
+    grid-template-columns: 1fr;
+  }
+
+  @include respond(phone) {
+    width: 98vw;
+  }
 }
 
 .grid__without-gap {

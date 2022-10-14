@@ -5,6 +5,8 @@
   font-family: "Rubik", sans-serif;
   transition: all 0.1s;
   color: #4d4d4d;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+  hyphens: auto;
 }
 
 html {
@@ -343,6 +345,7 @@ button {
 @media only screen and (max-width: 37.5em) {
   .cont__costumers {
     height: 25rem;
+    width: 98vw;
   }
 }
 
@@ -844,6 +847,11 @@ button {
     grid-template-columns: 1fr;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .cont-grid-2x {
+    width: 98vw;
+  }
+}
 
 .cont-grid-3x {
   background: transparent;
@@ -865,6 +873,11 @@ button {
     grid-template-columns: 1fr;
   }
 }
+@media only screen and (max-width: 37.5em) {
+  .cont-grid-3x {
+    width: 98vw;
+  }
+}
 
 .grid__without-gap {
   grid-gap: 0;
@@ -881,6 +894,7 @@ button {
 @media only screen and (max-width: 37.5em) {
   .motto {
     height: 30rem;
+    width: 98vw;
   }
 }
 .motto:hover {
