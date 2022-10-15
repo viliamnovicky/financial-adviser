@@ -691,6 +691,19 @@ button {
   opacity: 1;
   right: 0;
 }
+.hamburger__checkbox:checked + .hamburger__btn .hamburger__part--top {
+  transform: rotate(225deg);
+  left: 25%;
+  top: 50%;
+}
+.hamburger__checkbox:checked + .hamburger__btn .hamburger__part--middle {
+  opacity: 0;
+}
+.hamburger__checkbox:checked + .hamburger__btn .hamburger__part--bottom {
+  transform: rotate(-225deg);
+  left: 25%;
+  top: 50%;
+}
 .hamburger__btn {
   visibility: hidden;
   z-index: 10;
@@ -755,6 +768,7 @@ button {
 }
 .hamburger__part--middle {
   top: 50%;
+  transform: translate(-50% -50%);
 }
 .hamburger__part--bottom {
   top: 70%;
@@ -771,13 +785,29 @@ button {
     grid-template-columns: 1fr 1fr !important;
   }
 }
+@media only screen and (max-width: 62.5em) {
+  .form {
+    grid-template-columns: 1fr !important;
+  }
+}
 .form__cont {
-  width: 30vw;
+  width: 100%;
   height: 30vw;
   margin-top: 5rem;
 }
+@media only screen and (max-width: 62.5em) {
+  .form__cont {
+    margin-top: 0;
+  }
+}
 .form__group {
   height: 10rem;
+  position: relative;
+}
+.form__send {
+  position: absolute;
+  bottom: 20rem;
+  z-index: 1000;
 }
 .form__element {
   display: block;
@@ -792,6 +822,12 @@ button {
 }
 .form__element--label--textarea {
   padding-top: 1rem;
+}
+@media only screen and (max-width: 62.5em) {
+  .form__element--label--textarea {
+    position: absolute;
+    bottom: 18rem;
+  }
 }
 .form__element--input {
   margin-bottom: 1rem;
@@ -817,6 +853,14 @@ button {
   padding: 1rem;
   height: 24rem;
   border: 1px solid rgba(112, 126, 131, 0.2);
+}
+@media only screen and (max-width: 62.5em) {
+  .form__element--textarea {
+    position: absolute;
+    height: 12rem;
+    width: 76.3%;
+    bottom: 22rem;
+  }
 }
 .form__element--textarea:focus {
   outline: none;
@@ -1108,6 +1152,11 @@ button {
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+}
+@media only screen and (max-width: 62.5em) {
+  .modal__cont {
+    height: 80vh;
+  }
 }
 .modal__send {
   position: absolute;

@@ -56,7 +56,11 @@
         height: 70vh;
         z-index: 1000000;
         position: fixed;
-        @include fixed-center
+        @include fixed-center;
+
+        @include respond(tab-port) {
+            height: 80vh;
+          }
     }
 
     &__send {

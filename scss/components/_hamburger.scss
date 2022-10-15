@@ -46,6 +46,22 @@
         right: 0;
     }
 
+    &__checkbox:checked + &__btn &__part--top {
+        transform: rotate(225deg);
+        left: 25%;
+        top: 50%;
+    }
+
+    &__checkbox:checked + &__btn &__part--middle {
+        opacity: 0;
+    }
+
+    &__checkbox:checked + &__btn &__part--bottom {
+        transform: rotate(-225deg);
+        left: 25%;
+        top: 50%;
+    }
+
     &__btn {
         visibility: hidden;
         z-index: 10;
@@ -111,6 +127,7 @@
 
         &--middle {
             top: 50%;
+            transform: translate(-50% -50%);
         }
 
         &--bottom {
