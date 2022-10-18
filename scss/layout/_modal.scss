@@ -59,9 +59,9 @@
         @include fixed-center;
 
         @include respond(tab-port) {
-            height: 77rem;
-            overflow-y: auto;
-            overflow-x: hidden;   
+            height: 77rem; 
+            top: 0; 
+            transform: translate(-50% );
           }
     }
 
