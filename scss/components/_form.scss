@@ -1,111 +1,123 @@
 .form {
-    width: 61vw !important;
-    align-items: center !important;
-    background: red;
-    z-index: 100000000000;
+  width: 90vw !important;
+  height: 65rem !important;
+  margin-top: 20rem !important;
+  padding-top: 20rem;
+  background: $color-grey-light-3 url(../img/backgroung-ornament-modal.png)
+    no-repeat center center/cover !important;
 
-    @include respond(tab-land) {
-        grid-template-columns: 1fr 1fr !important;
+  @include respond(tab-land) {
+    grid-template-columns: 1fr 1fr !important;
+  }
+
+  @include respond(tab-port) {
+    grid-template-columns: 1fr !important;
+    height: 95rem !important;
+  }
+
+  @include respond(phone) {
+    width: 98vw !important;
+  }
+
+  &__header {
+    font-size: $font-size-h2;
+    color: $color-white;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    top: 70%;
+
+    @include respond(tab-port) {
+        top: 50%;
       }
+  }
+
+  &__cont {
+    width: 80%;
+    margin: auto;
+    margin-top: 5rem;
+  }
+
+  &__group {
+    height: 10rem;
+    position: relative;
+  }
+
+  &__send {
+    position: absolute;
+    bottom: -23rem;
+    left: 50%;
+    transform: translateX(-50%);
+
+    @include respond(tab-port) {
+      bottom: -20rem;
+    }
+  }
+
+  &__element {
+    display: block;
+    width: 100%;
+    padding: 1rem 0;
+    font-size: $font-size-h5;
+
+    &--label {
+      text-align: left;
+      padding-left: 1rem;
+      padding-top: 0;
+
+      &--textarea {
+        padding-top: 1rem;
+      }
+    }
+
+    &--input {
+      margin-bottom: 1rem;
+      border: 1px solid rgba($color-grey-dark-3, 0.2);
+      padding-left: 1rem;
+      background: $color-white;
+      color: $color-grey-dark;
+
+      &:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+        border: 1px solid green;
+      }
+
+      &:focus:invalid {
+        border: 1px solid red;
+      }
+    }
+
+    &--input:placeholder-shown + &--label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-4rem);
+    }
+
+    &--textarea {
+      padding: 1rem;
+      height: 24rem;
+      border: 1px solid rgba($color-grey-dark-3, 0.2);
 
       @include respond(tab-port) {
-        grid-template-columns: 1fr !important;
+        margin-top: -15rem;
       }
 
-    &__cont {
-        width: 100%;
-        height: 30vw;
-        margin-top: 5rem;
+      &:focus {
+        outline: none;
+        box-shadow: 0 1rem 2rem rgba($color-black, 0.1);
+        border: 1px solid green;
+      }
 
-        @include respond(tab-port) {
-            margin-top: 0;
-          }
+      &:focus:invalid {
+        border: 1px solid red;
+      }
     }
 
-    &__group {
-        height: 10rem;
-        position: relative;
+    &--textarea:placeholder-shown + &--label {
+      opacity: 0;
+      visibility: hidden;
+      transform: translateY(-22rem);
     }
-
-    &__send {
-        position: absolute;
-        bottom: 20rem;
-        z-index: 1000;
-    }
-
-    &__element {
-        display: block;
-        width: 100%;
-        padding: 1rem 0;
-        font-size: $font-size-h5;
-
-        &--label {
-            text-align: left;
-            padding-left: 1rem;
-            padding-top: 0;
-
-            &--textarea {
-                padding-top: 1rem;
-
-                @include respond(tab-port) {
-                    position: absolute;
-                    bottom:18rem;
-                  }
-            }
-        }
-
-        &--input {
-            margin-bottom: 1rem;
-            border: 1px solid rgba($color-grey-dark-3, .2);
-            padding-left: 1rem;
-            background: $color-white;
-            color: $color-grey-dark;
-
-            &:focus {
-                outline: none;
-                box-shadow: 0 1rem 2rem rgba($color-black, .1);
-                border: 1px solid green;               
-            }
-
-            &:focus:invalid {
-                border: 1px solid red;
-            }
-        }
-
-        &--input:placeholder-shown + &--label {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-4rem);
-        }
-
-        &--textarea {
-            padding: 1rem;
-            height: 24rem;
-            border: 1px solid rgba($color-grey-dark-3, .2);
-
-            @include respond(tab-port) {
-                position: absolute;
-                height: 12rem;
-                width: 76.3%;
-                bottom: 22rem;
-              }
-
-            &:focus {
-                outline: none;
-                box-shadow: 0 1rem 2rem rgba($color-black, .1);
-                border: 1px solid green;
-            }
-
-            &:focus:invalid {
-                border: 1px solid red;
-            }
-        }
-
-        &--textarea:placeholder-shown + &--label {
-            opacity: 0;
-            visibility: hidden;
-            transform: translateY(-22rem);
-        }
-    }
-
+  }
 }

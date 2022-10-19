@@ -1,15 +1,5 @@
 .modal {
 
-    &__header {
-        font-size: $font-size-h2;
-        color: $color-white;
-        margin: 0 auto;
-        text-align: center;
-        width: 100%;
-        margin-bottom: 2rem;
-        padding-top: 5rem;
-    }
-
     &__close {
         font-weight: 800;
         position: absolute;
@@ -63,12 +53,5 @@
             top: 0; 
             transform: translate(-50% );
           }
-    }
-
-    &__send {
-        position: absolute;
-        bottom: 10rem;
-        left: 50%;
-        transform: translateX(-50%);
     }
 }

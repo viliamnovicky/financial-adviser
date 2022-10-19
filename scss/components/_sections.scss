@@ -1,7 +1,6 @@
 .section {
   transition: all 0.5s;
   position: relative;
-  height: 1000%;
 
   &__header {
     font-size: $font-size-h1;
@@ -49,5 +48,10 @@
 
   &__contact {
     padding-top: $padding-section-top;
+    height: 81rem;
+
+    @include respond(tab-port) {
+      height: 111rem;
+    }
   }
 }
