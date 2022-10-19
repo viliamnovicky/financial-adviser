@@ -779,12 +779,23 @@ button {
   top: 70%;
 }
 
+.form_outer {
+  background: #c0cfd6 url(../img/backgroung-ornament-modal.png);
+  width: 90vw;
+  margin: auto;
+}
+@media only screen and (max-width: 37.5em) {
+  .form_outer {
+    width: 98vw;
+  }
+}
+
 .form {
-  width: 90vw !important;
+  width: 80rem !important;
   height: 65rem !important;
   margin-top: 20rem !important;
   padding-top: 20rem;
-  background: #c0cfd6 url(../img/backgroung-ornament-modal.png) no-repeat center center/cover !important;
+  justify-content: left !important;
 }
 @media only screen and (max-width: 78em) {
   .form {
@@ -795,11 +806,7 @@ button {
   .form {
     grid-template-columns: 1fr !important;
     height: 95rem !important;
-  }
-}
-@media only screen and (max-width: 37.5em) {
-  .form {
-    width: 98vw !important;
+    width: 80% !important;
   }
 }
 .form__header {
@@ -816,7 +823,7 @@ button {
   }
 }
 .form__cont {
-  width: 80%;
+  width: 100%;
   margin: auto;
   margin-top: 5rem;
 }

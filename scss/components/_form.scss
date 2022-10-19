@@ -1,10 +1,19 @@
+.form_outer {
+        background: $color-grey-light-3 url(../img/backgroung-ornament-modal.png);
+        width: 90vw;
+        margin: auto;
+
+        @include respond(phone) {
+            width: 98vw;
+          }
+}
+
 .form {
-  width: 90vw !important;
+  width: 80rem !important;
   height: 65rem !important;
   margin-top: 20rem !important;
   padding-top: 20rem;
-  background: $color-grey-light-3 url(../img/backgroung-ornament-modal.png)
-    no-repeat center center/cover !important;
+  justify-content: left !important;
 
   @include respond(tab-land) {
     grid-template-columns: 1fr 1fr !important;
@@ -13,10 +22,7 @@
   @include respond(tab-port) {
     grid-template-columns: 1fr !important;
     height: 95rem !important;
-  }
-
-  @include respond(phone) {
-    width: 98vw !important;
+    width: 80% !important;
   }
 
   &__header {
@@ -33,7 +39,7 @@
   }
 
   &__cont {
-    width: 80%;
+    width: 100%;
     margin: auto;
     margin-top: 5rem;
   }
